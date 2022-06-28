@@ -69,7 +69,8 @@ a {
 /* убирает рамку при TAB */
 a:focus,
 button:focus,
-.modal-input, .modal-text {
+.modal-input, .modal-text,
+.footer-input {
   outline: currentColor;
 }
 
@@ -571,6 +572,13 @@ h1[class="visually-hidden"] {
   color: var(--footer-contact-color);
   margin-right: 12px;
 }
+
+.footer-input:hover,
+.footer-input:focus {
+  border-color: var(--highlight-color);
+}
+
+
 .footer-btn {
   min-width: 200px;
   height: 50px;
