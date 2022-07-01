@@ -20,16 +20,9 @@ html {
   content: "♥️";
   color: brown;
 } */
-.header-icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+/* Рука-указатель */
+button {
+  cursor: pointer;
 }
 
 /* Сброс стилей / Reset styles */
@@ -60,11 +53,6 @@ button:focus,
   outline: currentColor;
 }
 
-/* Рука-указатель */
-button {
-  cursor: pointer;
-}
-
 /* Переменные: цвета и прочее */
 :root {
   --main-color: #212121;
@@ -86,6 +74,57 @@ button {
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* прячем заголовок от пользователя, Google  видит заголовок */
+h2[class=visually-hidden],
+h1[class=visually-hidden] {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  color: var(--main-tittle-color);
+  background: var(--highlight-color);
+  /* выровнять кнопку по центру */
+  margin: 0 auto;
+  display: block;
+  /* выровнять кнопку по центру */
+  min-width: 200px;
+  height: 50px;
+  transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
+}
+
+.main-btn:hover,
+.main-btn:focus,
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: var(--highlight-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 /* header */
 .header {
   border-bottom: 1px solid var(--header-bottom);
@@ -103,6 +142,11 @@ button {
 .contacts-header {
   display: flex;
   margin-left: auto;
+}
+
+.header-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .header-logo {
@@ -180,75 +224,6 @@ button {
 .contact-e:active,
 .contact:active {
   color: var(--mark-color);
-}
-
-/* main */
-.main-box {
-  background: var(--footer-background-color);
-  padding: 200px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_img.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.main {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--main-tittle-color);
-  margin: 0 auto;
-  max-width: 696px;
-  margin-bottom: 30px;
-}
-
-.main-btn {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: center;
-  letter-spacing: 0.06em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 0;
-  color: var(--main-tittle-color);
-  background: var(--highlight-color);
-  /* выровнять кнопку по центру */
-  margin: 0 auto;
-  display: block;
-  /* выровнять кнопку по центру */
-  min-width: 200px;
-  height: 50px;
-  transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
-}
-
-.main-btn:hover,
-.main-btn:focus,
-.footer-btn:hover,
-.footer-btn:focus {
-  background-color: var(--highlight-btn);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-/* прячем заголовок от пользователя, Google  видит заголовок */
-h2[class=visually-hidden],
-h1[class=visually-hidden] {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
 
 .details {
@@ -342,82 +317,6 @@ h1[class=visually-hidden] {
   color: var(--main-tittle-color);
 }
 
-.section-team {
-  background: var(--description-background-color);
-  padding: 94px 0;
-}
-
-.wrap-list {
-  display: flex;
-}
-
-.warp-item {
-  width: 270px;
-  text-align: center;
-  background: var(--main-tittle-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.warp-item:not(:last-child) {
-  margin-right: var(--typical-margin);
-}
-
-.div-warp {
-  padding: 30px 0;
-}
-
-.name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  color: var(--main-color);
-  margin-bottom: 10px;
-}
-
-.job-title {
-  font-size: 16px;
-  line-height: 1.19;
-  color: var(--job-title-color);
-  margin-bottom: 16px;
-}
-
-/* soc-icon */
-.soc-list {
-  display: flex;
-  justify-content: center;
-}
-
-.soc-item {
-  margin-left: 10px;
-}
-
-.soc-item:first-child {
-  margin-left: 0;
-}
-
-.soc-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  color: var(--soc-icon-color);
-  fill: var(--soc-icon-color);
-  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
-}
-
-.soc-icon {
-  color: currentColor;
-}
-
-.soc-link:hover,
-.soc-link:focus {
-  background-color: var(--highlight-color);
-  fill: var(--main-tittle-color);
-}
-
 .section-clients {
   padding: 94px 0;
 }
@@ -460,6 +359,32 @@ h1[class=visually-hidden] {
 .clients-link:focus {
   border: 1px solid var(--highlight-color);
   fill: var(--highlight-color);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #212121;
+  background-color: #ffffff;
+}
+
+/* Репета рекомендовал */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* a::before {
+  content: "♥️";
+  color: brown;
+} */
+/* Рука-указатель */
+button {
+  cursor: pointer;
 }
 
 /* footer */
@@ -610,6 +535,107 @@ h1[class=visually-hidden] {
 
 .footer-icon {
   margin-left: 10px;
+}
+
+/* main */
+.main-box {
+  background: var(--footer-background-color);
+  padding: 200px 0;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.main {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-tittle-color);
+  margin: 0 auto;
+  max-width: 696px;
+  margin-bottom: 30px;
+}
+
+.section-team {
+  background: var(--description-background-color);
+  padding: 94px 0;
+}
+
+.wrap-list {
+  display: flex;
+}
+
+.warp-item {
+  width: 270px;
+  text-align: center;
+  background: var(--main-tittle-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.warp-item:not(:last-child) {
+  margin-right: var(--typical-margin);
+}
+
+.div-warp {
+  padding: 30px 0;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+.job-title {
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--job-title-color);
+  margin-bottom: 16px;
+}
+
+/* soc-icon */
+.soc-list {
+  display: flex;
+  justify-content: center;
+}
+
+.soc-item {
+  margin-left: 10px;
+}
+
+.soc-item:first-child {
+  margin-left: 0;
+}
+
+.soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  color: var(--soc-icon-color);
+  fill: var(--soc-icon-color);
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
+}
+
+.soc-icon {
+  color: currentColor;
+}
+
+.soc-link:hover,
+.soc-link:focus {
+  background-color: var(--highlight-color);
+  fill: var(--main-tittle-color);
 }
 
 /* ---- МОДАЛЬНОЕ ОКНО ---- */
@@ -810,6 +836,107 @@ h1[class=visually-hidden] {
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--highlight-color);
+}
+
+/* header */
+.header {
+  border-bottom: 1px solid var(--header-bottom);
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.header .container,
+.header-nav,
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-header {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin-right: 93px;
+}
+
+.header-logo-first,
+.footer-logo-first {
+  color: var(--highlight-color);
+}
+
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* ПОДЧЕРКИВАНИЕ */
+.header-item-link {
+  color: var(--main-color);
+  margin-top: 4px;
+  position: relative;
+  /*!!!!!!!!!!!!! ЕСЛИ НЕТ - ТО ФИГУРА
+  ПОЗИЦИОНИРУЕТСЯ ОТНОСИТЕЛЬНО ДОКУМЕНТА 
+  при position: absolute; !!!!!!!!!!!!!!!*/
+  transition: color 250ms var(--timing-function);
+}
+
+.stream::after {
+  content: "";
+  position: absolute;
+  bottom: -32.5px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--highlight-color);
+}
+
+.contact-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.header-link {
+  transition: color 250ms var(--timing-function);
+  display: flex;
+  align-items: center;
+}
+
+.header-item-link:hover,
+.header-item-link:focus,
+.header-link:hover,
+.header-link:focus,
+.contact-e:hover,
+.contact-e:focus,
+.contact:hover,
+.contact:focus {
+  color: var(--highlight-color);
+}
+
+.header-item-link:active,
+.header-link:active,
+.contact-e:active,
+.contact:active {
+  color: var(--mark-color);
 }
 
 /* Портфолио */
