@@ -1,4 +1,3 @@
-
 /* Сброс стилей / Reset styles */
 p,
 h1,
@@ -19,8 +18,8 @@ a {
 /* убирает рамку при TAB */
 a:focus,
 button:focus,
-.modal-input, .modal-text,
+.modal-input,
+.modal-text,
 .footer-input {
   outline: currentColor;
 }
-

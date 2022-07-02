@@ -34,25 +34,23 @@
     <!-- header -->
     <header class="header">
       <div class="container">
-        <nav class="header-nav">
-          <a href="./index.html" class="header-logo"
-            ><span class="header-logo-first">Web</span>Studio
+        <nav class="nav">
+          <a href="./index.html" class="logo nav__logo"
+            ><span class="logo__first">Web</span>Studio
           </a>
-          <ul class="header-list">
-            <li class="header-item">
-              <a
-                href="./index.html"
-                class="header-item-link header-text + stream"
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="./index.html" class="menu__link header-text + stream"
                 >Студия</a
               >
             </li>
-            <li class="header-item">
-              <a href="./portfolio.html" class="header-item-link header-text"
+            <li class="menu__item">
+              <a href="./portfolio.html" class="menu__link header-text"
                 >Портфолио</a
               >
             </li>
-            <li class="header-item">
-              <a href="" class="header-item-link header-text">Контакты</a>
+            <li class="menu__item">
+              <a href="" class="menu__link header-text">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -87,9 +85,9 @@
     </header>
     <!-- main -->
     <main>
-      <section class="main-box">
+      <section class="main">
         <div class="container">
-          <h1 class="main" title="Эффективные решения для вашего бизнеса">
+          <h1 class="main__box" title="Эффективные решения для вашего бизнеса">
             Эффективные решения для вашего бизнеса
           </h1>
           <button class="main-btn" type="button" data-modal-open>
@@ -395,8 +393,8 @@
       <div class="container">
         <div>
           <div class="div-footer-logo">
-            <a href="./index.html" class="footer-logo"
-              ><span class="footer-logo-first">Web</span>Studio
+            <a href="./index.html" class="logo footer__logo"
+              ><span class="logo__first">Web</span>Studio
             </a>
           </div>
           <address>
@@ -476,7 +474,7 @@
                 required
               />
             </label>
-            <button type="submit" class="footer-btn">
+            <button type="submit" class="main-btn footer-btn">
               Подписаться
               <svg class="footer-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
@@ -551,7 +549,7 @@
               placeholder="Введите текст"
             ></textarea>
           </label>
-          <div class="policy-center">
+          <div class="checkbox-center">
             <label class="check-label">
               <input type="checkbox" name="check-box" class="check-box" />
               <svg class="icon-box" width="16" height="15">
@@ -568,7 +566,7 @@
               >
             </label>
           </div>
-          <button type="submit" class="main-btn modal-btn">Отправить</button>
+          <button type="submit" class="main-btn">Отправить</button>
         </form>
       </div>
     </div>

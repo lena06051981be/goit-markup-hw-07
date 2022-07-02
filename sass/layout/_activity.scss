@@ -1,13 +1,6 @@
-
-
-
-
-
-
 .team-works {
   padding-bottom: 94px;
 }
-
 .team {
   font-weight: 700;
   font-size: 36px;
@@ -25,11 +18,11 @@
 .team-li {
   position: relative;
   display: flex;
+  &:not(:last-child) {
+    margin-right: var(--typical-margin);
+  }
 }
 
-.team-li:not(:last-child) {
-  margin-right: var(--typical-margin);
-}
 .team-profile {
   text-transform: uppercase;
   position: absolute;
